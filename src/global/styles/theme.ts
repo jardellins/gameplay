@@ -1,4 +1,5 @@
 export const theme = {
+<<<<<<< HEAD
     colors: {
       primary: '#E51C44',
       
@@ -28,3 +29,12 @@ export const theme = {
       text500: 'Inter_500Medium',
     }
   };
+=======
+  colors: {
+    background: "#0D133D",
+    heading: "#DDE3F0",
+    primary: "#E51C44",
+    line: "#991F36",
+  },
+};
+>>>>>>> 0bb1fc536a831c9625a3a39a189236429c98822e

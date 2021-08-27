@@ -28,9 +28,9 @@ export function SignIn() {
 
       <View style={styles.content}>
         <Text style={styles.title}>
-          Organize {"\n"}
-          suas jogatinas {"\n"}
-          facilmente
+          Conecte-se {"\n"}
+          e organize sua {"\n"}
+          jogatinas
         </Text>
 
         <Text style={styles.subtitle}>
