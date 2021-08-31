@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     marginBottom: 12,
   },
   title: {
-    fontFamily: theme.fonts.text400,
+    fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 18,
   },
@@ -52,4 +52,12 @@ export const styles = StyleSheet.create({
     marginLeft: 7,
     marginRight: 24,
   },
+  guildIconCOntainer: {
+    height: 68,
+    width: 64,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 20,
+  }
 });

@@ -40,7 +40,7 @@ export function Appointment({ data, ...rest }: Props) {
 
         <View style={styles.content}>
           <View style={styles.header}>
-            <Text>{data.guild.name}</Text>
+            <Text style={styles.title}>{data.guild.name}</Text>
 
             <Text style={styles.category}>{category.title}</Text>
           </View>
