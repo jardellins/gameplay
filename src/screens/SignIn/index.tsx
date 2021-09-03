@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import { View, Text, Image, Alert } from "react-native";
+import React from "react";
+import { View, Text, Image, Alert, ActivityIndicator } from "react-native";
+
+import { useAuth } from "../../hooks/auth";
 
 import IllustrationImg from "../../assets/illustration.png";
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Background } from "../../components/Background";
-import { useAuth } from "../../hooks/auth";
 
 import { styles } from "./styles";
+import { theme } from "../../global/styles/theme";
 
 export function SignIn() {
-  const { user, signIn } = useAuth();
+  const { loading, signIn } = useAuth();
 
   async function handleSingIn() {
     try {
@@ -30,8 +32,7 @@ export function SignIn() {
 
         <View style={styles.content}>
           <Text style={styles.title}>
-            Conecte-se {"\n"}
-            e organize sua {"\n"}
+            Conecte-se {"\n"}e organize sua {"\n"}
             jogatinas
           </Text>
 
@@ -39,7 +40,13 @@ export function SignIn() {
             Crie grupos para jogar seus games {"\n"}
             favoritos com seus amigos
           </Text>
-          <ButtonIcon title="Entrar com o Discord" onPress={handleSingIn} />
+
+          {loading ? (
+            <ActivityIndicator color={theme.colors.primary} />
+          ) : (
+            <ButtonIcon title="Entrar com o Discord" onPress={handleSingIn} />
+          )}
+
         </View>
       </View>
     </Background>
